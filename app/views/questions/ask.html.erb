@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Ask the stupid Coach</h1>
+
+<form action="answer" method="GET">
+  <input type="text"
+         name="question"
+         value="<%= @question = params[:question] %>"
+         placeholder="What do you want to ask?">
+  <input type="submit" value="Ask!">
+</form>
+<hr>
+</div class="container">

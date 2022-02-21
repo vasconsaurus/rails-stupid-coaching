@@ -1,0 +1,21 @@
+<div class="container">
+
+<h1>It has been answered!</h1>
+<div class="question"><p class="person">you:</p><p> <%= @question = params[:question] %></p></div>
+<hr>
+<div class="answer">
+<p class="person">coach:</p>
+<p>
+  <% if @question.include? "?" %>
+    <%= "Silly question, get dressed and go to work!" %>
+  <% elsif @question == "I am going to work!" %>
+    <%= "Great!" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+   <% end %>
+</p>
+</div>
+<hr>
+<div class="new_question"><%= link_to "ask again?", ask_path %></div>
+
+</div class="container">
